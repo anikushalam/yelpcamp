@@ -51,6 +51,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 //use static directory
 app.use(express.static(path.join(__dirname, 'public')));
+
 //for parsing the body if we use req.body nothing show in page
 //So use this
 app.use(express.urlencoded({ extended: true }));
