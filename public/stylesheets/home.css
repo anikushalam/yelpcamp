@@ -1,37 +1,126 @@
-body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://images.unsplash.com/photo-1618089086953-c1b3b2b6f19c?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMzfDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
-    background-size: cover;
-    background-position: center;
-    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
-}
-.cover-container{
-    max-width: 80vw;
-    min-width: 60vw;
-}
-.nav-link{
-    padding: 0.25rem 0;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.5);
-    margin-left: 1rem;
-    border-bottom: 0.25rem solid transparent;
-}
-.nav-link:hover{
-    color: rgba(255, 255, 255, 0.5);
-    border-bottom-color: rgba(255, 255, 255, 0.5);
+.cover-container {
+  max-width: 90vw;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
-.nav-link.active{
-    color: white;
-    border-bottom-color: white;
+@media (max-width: 550px) {
+  .cover-container {
+    min-width: 100vw;
+  }
+}
+@media screen and (max-width: 550px) {
+  .nav {
+    flex-direction: column;
+    display: inline-block;
+  }
+  .nav-item {
+    text-align: justify;
+  }
+  .nav-link.active {
+    border-bottom: none;
+    font-size: 20px;
+  }
+  .nav-link {
+    font-size: 18px;
+  }
+  .nav-link:hover {
+    border-style: none;
+  }
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+  color: white;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: -10px;
+  display: inline-block;
+  cursor: not-allowed;
+  letter-spacing: 0.1rem;
+}
+.nav-link {
+  padding: 0.2rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  margin-left: 1rem;
+  border-bottom: 0.25rem solid transparent;
+}
+.nav-link:hover {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.3mm;
+  border-bottom-color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-link.active {
+  color: white;
+  border-bottom-color: white;
 }
 
 .btn-secondary {
-    color: #333333;
-    text-shadow: none;
+  font: inherit;
+  color: darkblue;
+  text-shadow: none;
+  background: #333;
+  border: 1px solid #333;
+  padding: 0.7rem 1.5rem;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+  border-radius: 15px 30px;
 }
-.btn-secondary:hover{
-    color: #333333;
-    text-shadow: none;
+
+.btn-secondary:hover {
+  box-shadow: 0 1px 10px 0 rgb(126, 8, 8), 0 6px 20px 0 rgba(232, 236, 8, 0.842);
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: #75e6da;
+  margin-top: 1px;
+  display: inline-block;
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #dd0db0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+    url(https://res.cloudinary.com/djfhip09l/image/upload/v1620498275/YelpCamp/v2osk-1Z2niiBPg5A-unsplash_hprwdf.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  margin-top: 5.7rem;
+  color: white;
+  text-align: center;
+}
+.lead {
+  font-weight: 500;
+  text-align: center;
+  color: rgb(214, 228, 233);
+}
+h1 {
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+h1:hover {
+  line-height: unset;
 }

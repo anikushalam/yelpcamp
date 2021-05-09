@@ -1,9 +1,66 @@
-#cluster-map{
-    width: 100%;
-    height: 500px;
+#cluster-map {
+  width: 100%;
+  height: 500px;
 }
 
-#map{
-    width: 100%;
-    height: 300px;
+#map {
+  width: 100%;
+  height: 300px;
+}
+
+body {
+  background-color: #5e718a;
+}
+
+.imgs {
+  width: auto;
+  height: 300px;
+}
+
+.edit-imgs {
+  width: auto;
+  height: 300px;
+}
+.all-campground {
+  text-align: center;
+  margin: 10px;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  border-bottom: 0.25rem solid transparent;
+  border-bottom-color: yellow;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.new-class label {
+  font-size: 18px;
+  color: white;
+}
+
+/* .navbar-light .navbar-nav .nav-link {
+  color: white;
+} */
+.navbar-light .navbar-nav .nav-link {
+  padding: 0.2rem 0;
+  font-weight: 700;
+  margin-left: 2.5rem;
+  letter-spacing: 0.3mm;
+  color: rgba(0, 0, 0, 0.9);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover {
+  color: white;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: -10px;
+  display: inline-block;
+  cursor: not-allowed;
+  letter-spacing: 0.1rem;
 }
