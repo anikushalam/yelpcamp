@@ -40,7 +40,7 @@
         <li class="list-group-item text-muted"><%= campground.location %></li>
         <li class="list-group-item"><%= campground.author.username %></li>
         <li class="list-group-item">
-          $ <%= campground.price %> <sup>99</sup> /night
+          Rs. <%= campground.price %>.<sub>00</sub> /night
         </li>
       </ul>
       <% if(currentUser && campground.author.equals(currentUser)) {%>
