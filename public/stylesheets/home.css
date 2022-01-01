@@ -124,3 +124,7 @@ h1 {
 h1:hover {
   line-height: unset;
 }
+
+.account {
+  cursor: pointer;
+}

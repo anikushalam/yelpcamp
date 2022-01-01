@@ -23,6 +23,7 @@ const helmet = require('helmet');
 const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
+const accountRoutes = require('./routes/accounts') 
 const MongoDBStore = require('connect-mongo');
 
 // process.env.DB_URL
@@ -182,8 +183,8 @@ app.use((req, res, next) => {
 //     const newUser = await User.register(user, 'chicken');
 //     res.send(newUser);
 // })
-
 app.use('/', userRoutes);
+app.use('/account', accountRoutes);
 app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/reviews', reviewRoutes);
 

@@ -1,0 +1,157 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="row mb-5">
+  <div class="col-sm-8 offset-sm-2 shadow-sm bg-body">
+    <h2 style="text-align: center" class="my-3">Your Profile</h2>
+    <div class="row g-3">
+      <div class="col-md-12" style="text-align: center">
+        <%#if(showAccount.imageProfile){ %>
+        <!-- <img
+          style="width: 150px; height: 150px; border-radius: 50%"
+          class="shadow-sm bg-body"
+          src="<%#= showAccount.imageProfile %> "
+          alt="File not found"
+        /> -->
+        <%# } else { %>
+        <img
+          style="width: 150px; height: 150px; border-radius: 50%"
+          class="shadow-sm bg-body"
+          src="https://images.unsplash.com/photo-1638612913771-8f00622b96fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+          alt="File not found"
+        />
+        <%# } %>
+      </div>
+      <!-- src="https://images.unsplash.com/photo-1638612913771-8f00622b96fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" -->
+
+      <div class="col-md-4">
+        <label for="first-name" class="form-label">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="first-name"
+          value="<%= showAccount.firstName %>"
+          disabled
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="middle-name" class="form-label">Middle Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="middle-name"
+          value="<%= showAccount.middleName %>"
+          disabled
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="last-name" class="form-label">Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="last-name"
+          value="<%= showAccount.lastName %>"
+          disabled
+        />
+      </div>
+      <div class="col-md-2">
+        <label for="age" class="form-label">Age</label>
+        <input
+          type="number"
+          class="form-control"
+          id="age"
+          value="<%= showAccount.age %>"
+          disabled
+        />
+      </div>
+
+      <div class="col-md-5">
+        <label for="username" class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          value="<%= showAccount.username %>"
+          disabled
+        />
+      </div>
+      <div class="col-md-5">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          value="<%= showAccount.email %>"
+          disabled
+        />
+      </div>
+      <div class="col-md-12">
+        <label for="bio" class="form-label">Bio</label>
+        <textarea class="form-control" id="bio" disabled>
+<%= showAccount.bio %></textarea
+        >
+      </div>
+      <div class="col-12">
+        <label for="currentLocation" class="form-label">Current Address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="currentLocation"
+          value="<%= showAccount.currentLocation %>"
+          disabled
+        />
+      </div>
+      <div class="col-12">
+        <label for="permanentAddress" class="form-label"
+          >Permanent Address</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="permanentAddress"
+          value="<%= showAccount.permanentAddress %>"
+          disabled
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="city" class="form-label">City</label>
+        <input
+          type="text"
+          class="form-control"
+          id="city"
+          value="<%= showAccount.city %>"
+          disabled
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="state" class="form-label">State</label>
+        <select id="state" class="form-select" disabled>
+          <option selected><%= showAccount.state %></option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="zipCode" class="form-label">Zip-Code</label>
+        <input
+          type="text"
+          class="form-control"
+          id="zipCode"
+          value="<%= showAccount.zipCode %>"
+          disabled
+        />
+      </div>
+      <div class="col-md-6">
+        <a
+          class="btn btn-success mb-3"
+          href="/account/<%= showAccount._id %>/edit"
+          >Edit Profile</a
+        >
+      </div>
+      <div class="col-md-6">
+        <a
+          class="btn btn-success mb-3"
+          href="/account/<%= showAccount._id %>/edit"
+          >Change Password</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

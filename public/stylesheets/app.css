@@ -9,12 +9,16 @@
 }
 
 body {
-  background-color: #5e718a;
+  background-color: #e5e4e2;
 }
 
 .imgs {
   width: auto;
   height: 300px;
+}
+.imgs-index {
+  width: auto;
+  height: 200px;
 }
 
 .edit-imgs {
@@ -24,7 +28,7 @@ body {
 .all-campground {
   text-align: center;
   margin: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: white;
   font-weight: bold;
   letter-spacing: 0.15rem;
@@ -63,4 +67,11 @@ body {
   display: inline-block;
   cursor: not-allowed;
   letter-spacing: 0.1rem;
+}
+
+.onHover {
+  display: none;
+}
+.onHover:hover {
+  display: inline-block;
 }

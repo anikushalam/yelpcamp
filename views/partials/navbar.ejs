@@ -1,6 +1,6 @@
 <nav
-  class="navbar sticky-top navbar-expand-md navbar-light"
-  style="background-color: #f18d03"
+  class="navbar sticky-top navbar-expand-md navbar-light shadow-sm"
+  style="background-color: #f16203"
 >
   <div class="container-fluid">
     <a class="navbar-brand" href="#">YelpCamp</a>
@@ -21,14 +21,119 @@
         <a class="nav-link" href="/campgrounds">Campgrounds</a>
         <a class="nav-link" href="/campgrounds/new">New Campgrounds</a>
       </div>
+      <form class="d-flex mx-5">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search campgrounds"
+          aria-label="Search"
+          id="searchBar"
+          name="search"
+          onkeyup="campground_filter()"
+        />
+      </form>
       <div class="navbar-nav ms-auto">
         <% if(!currentUser){ %>
         <a href="/login" class="nav-link">Login</a>
         <a href="/register" class="nav-link">Register</a>
         <% }else{ %>
+
+        <!-- Button trigger modal -->
+        <a
+          href=""
+          class="nav-link account"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          >&commat; <%= currentUser.username %>
+        </a>
         <a href="/logout" class="nav-link">Logout</a>
         <% } %>
       </div>
     </div>
   </div>
 </nav>
+
+<!-- Modal -->
+<% if(currentUser){%>
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content" style="border-radius: 0">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Your Profile</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!-- THis is the data fetch the current user  -->
+        <div class="row g-3">
+          <div class="col-md-12" style="text-align: center">
+            <%# if(currentUser.imageProfile){ %>
+
+            <!-- <img
+              style="width: 150px; height: 150px; border-radius: 50%"
+              class="shadow-sm bg-body"
+              src="https://drive.google.com/uc?export=view&id=12GTxlrniOENyYvcSfG9HFeH8oK7HxAjI"
+              alt="File not found"
+            /> -->
+            <%# } else { %>
+
+            <img
+              style="width: 150px; height: 150px; border-radius: 50%"
+              class="shadow-sm bg-body"
+              src="https://images.unsplash.com/photo-1638612913771-8f00622b96fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+              alt="File not found"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="username" class="form-label"></label>
+            <div class="input-group">
+              <div class="input-group-text">@</div>
+              <input
+                class="form-control"
+                id="username"
+                value="<%= currentUser.username %>"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label"></label>
+            <input
+              class="form-control"
+              id="email"
+              value="<%= currentUser.email %>"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a
+          href="/account"
+          class="btn mx-2 btn-outline-secondary shadow-sm"
+          style="border-radius: 0"
+          >Profile</a
+        >
+        <a
+          href="/account/<%= currentUser._id %>/edit"
+          class="btn mx-2 btn-outline-warning shadow-sm"
+          style="border-radius: 0"
+          >Edit</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<%}%>
+
+<script src="/javascripts/searchShow.js"></script>

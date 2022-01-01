@@ -15,7 +15,7 @@ const passport = require('passport');
 // router.post('/login', passport.authenticate('local', { failureFlash: true, failureRedirect: '/login' }), users.login);
 
 // router.get('/logout', users.logout)
-
+ 
 router.route('/register')
     .get(users.renderRegister)
     .post(catchAsync(users.register));
